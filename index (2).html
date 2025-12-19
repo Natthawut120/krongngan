@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์เรียนรู้การเขียนอัลกอริธึม</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>เว็บไซต์สอนการเขียนอัลกอริธึม</h1>
+        <nav>
+            <ul>
+                <li><a href="#concepts">แนวคิดเชิงนามธรรม</a></li>
+                <li><a href="#algorithms">ความรู้ด้านอัลกอริธึม</a></li>
+                <li><a href="#algorithm-display">การแสดงอัลกอริธึม</a></li>
+                <li><a href="#case-study">กรณีศึกษา</a></li>
+                <li><a href="#quiz">คลังข้อสอบ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="concepts" class="section">
+            <h2>แนวคิดเชิงนามธรรม (Abstraction)</h2>
+            <p>การคัดเลือกคุณลักษณะที่สำคัญจากปัญหา ตัดรายละเอียดที่ไม่จำเป็นออก</p>
+
+            <h2>แนวคิดเชิงคำนวณ (Computational Thinking)</h2>
+            <p>ประกอบด้วย 4 ส่วน: การแยกย่อย, การจดจำรูปแบบ, แนวคิดเชิงนามธรรม, และการออกแบบอัลกอริธึม</p>
+        </section>
+
+        <section id="algorithms" class="section">
+            <h2>ความรู้ด้านอัลกอริธึม</h2>
+            <h3>นิยาม</h3>
+            <p>ลำดับขั้นตอนการแก้ปัญหาที่ชัดเจน</p>
+            <h3>ประโยชน์</h3>
+            <ul>
+                <li>ช่วยให้การทำงานไม่สับสน</li>
+                <li>ลดความผิดพลาด</li>
+                <li>คอมพิวเตอร์ทำงานตามได้</li>
+            </ul>
+        </section>
+
+        <section id="algorithm-display" class="section">
+            <h2>การแสดงอัลกอริธึม 3 รูปแบบ</h2>
+            <div class="tabs">
+                <button class="tab-button" onclick="changeTab('natural-language')">ภาษาธรรมชาติ</button>
+                <button class="tab-button" onclick="changeTab('pseudocode')">รหัสลำลอง</button>
+                <button class="tab-button" onclick="changeTab('flowchart')">ผังงาน</button>
+            </div>
+            <div id="natural-language" class="tab-content">
+                <p>ใช้ภาษาคนอธิบาย</p>
+            </div>
+            <div id="pseudocode" class="tab-content">
+                <pre>
+START
+INPUT a, b
+OUTPUT a + b
+END
+                </pre>
+            </div>
+            <div id="flowchart" class="tab-content">
+                <img src="flowchart-example.png" alt="Flowchart Example">
+            </div>
+        </section>
+
+        <section id="case-study" class="section">
+            <h2>การประยุกต์ใช้และกรณีศึกษา</h2>
+            <p>ตัวอย่างระบบปูหญ้า: คำนวณพื้นที่สนาม, การหักลบพื้นที่ที่ไม่เกี่ยว, และเผื่อวัสดุ 10%</p>
+            <form>
+                <label for="length">ความยาว (เมตร):</label>
+                <input type="number" id="length">
+                <label for="width">ความกว้าง (เมตร):</label>
+                <input type="number" id="width">
+                <button type="submit">คำนวณ</button>
+            </form>
+            <div id="result"></div>
+        </section>
+
+        <section id="quiz" class="section">
+            <h2>คลังข้อสอบและเฉลย</h2>
+            <form id="quiz-form">
+                <p>ผังงานควรอยู่ในขั้นตอนใดของการพัฒนาโปรแกรม?</p>
+                <input type="radio" id="answer1" name="question1" value="A">
+                <label for="answer1">A) การออกแบบโปรแกรม</label><br>
+                <input type="radio" id="answer2" name="question1" value="B">
+                <label for="answer2">B) การเขียนโปรแกรม</label><br>
+                <button type="submit">ตรวจสอบคำตอบ</button>
+            </form>
+            <div id="quiz-result"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

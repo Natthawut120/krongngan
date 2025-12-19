@@ -1,0 +1,240 @@
+/* 1. ปรับแต่งพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Header */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f39c12;
+}
+
+/* 3. เนื้อหาหลัก */
+main {
+    flex-grow: 1;
+    padding: 40px 20px;
+}
+
+/* 4. ส่วนต่างๆ ของหน้า */
+.section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p, ul {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 5. ปุ่ม */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* 6. การจัดการแท็บ */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-button {
+    background-color: #34495e;
+    color: white;
+    padding: 12px 30px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #2c3e50;
+}
+
+.tab-button.active {
+    background-color: #3498db;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* 7. การแสดงผลแบบแอนิเมชั่น */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 8. Media Queries สำหรับมือถือและแท็บเล็ต */
+@media screen and (max-width: 768px) {
+    /* ปรับขนาดและตำแหน่งของ header */
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    /* เมนูใน header */
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    /* ปรับขนาดส่วนต่างๆ ในหน้าหลัก */
+    .section {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* ฟอร์ม */
+    form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    form input[type="number"],
+    form input[type="radio"] {
+        width: 100%;
+    }
+
+    /* เปลี่ยนรูปแบบในส่วนของรายการข้อสอบ */
+    #quiz-form {
+        text-align: center;
+    }
+
+    #quiz-result {
+        font-size: 16px;
+    }
+
+    /* ข้อความและรูปภาพในส่วนของการแสดงอัลกอริธึม */
+    .tab-content {
+        text-align: center;
+    }
+
+    .tab-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* เพิ่มการรองรับหน้าจอขนาดใหญ่ เช่นแท็บเล็ตขนาดใหญ่และคอมพิวเตอร์ */
+@media screen and (min-width: 769px) {
+    .tabs {
+        justify-content: space-around;
+    }
+
+    .tab-button {
+        padding: 12px 30px;
+    }
+
+    .section {
+        padding: 30px;
+    }
+}
