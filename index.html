@@ -40,7 +40,7 @@
         <h1>เว็บไซต์สอนการเขียนอัลกอริธึม</h1>
         <nav>
             <ul>
-                <li><a href="#concepts">แนวคิดเชิงนามธรรม</a></li>
+                <li><a href="#concepts">หน่วยการเรียนรู้ที่1</a></li>
                 <li><a href="#algorithms">ความรู้ด้านอัลกอริธึม</a></li>
                 <li><a href="#algorithm-display">การแสดงอัลกอริธึม</a></li>
                 <li><a href="#case-study">กรณีศึกษา</a></li>
@@ -51,11 +51,8 @@
 
     <main>
         <section id="concepts" class="section">
-            <h2>แนวคิดเชิงนามธรรม (Abstraction)</h2>
+            <h2>แนวคิดเชิงนามธรรม (Abstraction)</h2> <img src="1.png" alt="">
             <p>การคัดเลือกคุณลักษณะที่สำคัญจากปัญหา ตัดรายละเอียดที่ไม่จำเป็นออก</p>
-
-            <h2>แนวคิดเชิงคำนวณ (Computational Thinking)</h2>
-            <p>ประกอบด้วย 4 ส่วน: การแยกย่อย, การจดจำรูปแบบ, แนวคิดเชิงนามธรรม, และการออกแบบอัลกอริธึม</p>
         </section>
 
         <section id="algorithms" class="section">
@@ -67,16 +64,20 @@
                 <li>ช่วยให้การทำงานไม่สับสน</li>
                 <li>ลดความผิดพลาด</li>
                 <li>คอมพิวเตอร์ทำงานตามได้</li>
+                <img src="2.png" alt="">
             </ul>
         </section>
 
-        <section id="algorithm-display" class="section">
-            <h2>การแสดงอัลกอริธึม 3 รูปแบบ</h2>
-            <div class="tabs">
-                <button class="tab-button" onclick="changeTab('natural-language')">ภาษาธรรมชาติ</button>
-                <button class="tab-button" onclick="changeTab('pseudocode')">รหัสลำลอง</button>
-                <button class="tab-button" onclick="changeTab('flowchart')">ผังงาน</button>
-            </div>
+<section id="algorithm-display" class="section">
+    <h2>การแสดงอัลกอริธึม 3 รูปแบบ</h2>
+
+    <div class="tabs bubble-tabs">
+        <a href="png.html" class="bubble-btn">ภาษาธรรมชาติ</a>
+        <a href="4.html" class="bubble-btn">รหัสลำลอง</a>
+        <a href="5.html" class="bubble-btn">ผังงาน</a>
+    </div>
+</section>
+
             <div id="natural-language" class="tab-content">
                 <p>ใช้ภาษาคนอธิบาย</p>
             </div>
@@ -105,21 +106,138 @@ END
             </form>
             <div id="result"></div>
         </section>
+        
 
         <section id="quiz" class="section">
-            <h2>คลังข้อสอบและเฉลย</h2>
-            <form id="quiz-form">
-                <p>ผังงานควรอยู่ในขั้นตอนใดของการพัฒนาโปรแกรม?</p>
-                <input type="radio" id="answer1" name="question1" value="A">
-                <label for="answer1">A) การออกแบบโปรแกรม</label><br>
-                <input type="radio" id="answer2" name="question1" value="B">
-                <label for="answer2">B) การเขียนโปรแกรม</label><br>
-                <button type="submit">ตรวจสอบคำตอบ</button>
-            </form>
-            <div id="quiz-result"></div>
-        </section>
-    </main>
+    <h2>คลังข้อสอบและเฉลย</h2>
+
+    <form id="quiz-form">
+
+        <!-- ข้อ 1 -->
+        <div class="quiz-item">
+            <p><strong>1. ข้อมูลใดเป็นสาระสำคัญของการฝึกรีดผ้า เมื่อพิจารณาโดยใช้แนวคิดเชิงนามธรรม</strong></p>
+            <label><input type="radio" name="q1" value="1"> สีของผ้า</label><br>
+            <label><input type="radio" name="q1" value="2"> ชนิดของผ้า</label><br>
+            <label><input type="radio" name="q1" value="3"> ชนิดของอุปกรณ์ในการรีดผ้า</label><br>
+            <label><input type="radio" name="q1" value="4"> อุณหภูมิที่เหมาะสมสำหรับเนื้อผ้า</label>
+        </div>
+
+        <!-- ข้อ 2 -->
+        <div class="quiz-item">
+            <p><strong>2. ข้อมูลใดไม่ใช่สาระสำคัญของการฝึกรีดผ้า</strong></p>
+            <label><input type="radio" name="q2" value="1"> สีของผ้า</label><br>
+            <label><input type="radio" name="q2" value="2"> ชนิดของผ้า</label><br>
+            <label><input type="radio" name="q2" value="3"> ชนิดของอุปกรณ์ในการรีดผ้า</label><br>
+            <label><input type="radio" name="q2" value="4"> อุณหภูมิที่เหมาะสมสำหรับเนื้อผ้า</label>
+        </div>
+
+        <!-- ข้อ 3 -->
+        <div class="quiz-item">
+            <p><strong>3. คำสั่ง “คำนวณพื้นที่สี่เหลี่ยมผืนผ้า = กว้าง × ยาว” เป็นการเขียนอัลกอริทึมรูปแบบใด</strong></p>
+            <label><input type="radio" name="q3" value="1"> ผังงาน</label><br>
+            <label><input type="radio" name="q3" value="2"> ภาษาสื่อสาร</label><br>
+            <label><input type="radio" name="q3" value="3"> ภาษาธรรมชาติ</label><br>
+            <label><input type="radio" name="q3" value="4"> ภาษาคอมพิวเตอร์</label>
+        </div>
+
+        <!-- ข้อ 4 -->
+        <div class="quiz-item">
+            <p><strong>4. ข้อใดเรียงลำดับอัลกอริทึมการทำงานได้ถูกต้อง</strong></p>
+            <label><input type="radio" name="q4" value="1"> 2 → 5 → 6 → 4 → 3 → 7 → 8 → 1</label><br>
+            <label><input type="radio" name="q4" value="2"> 2 → 5 → 4 → 3 → 7 → 6 → 8 → 1</label><br>
+            <label><input type="radio" name="q4" value="3"> 2 → 6 → 4 → 3 → 7 → 5 → 8 → 1</label><br>
+            <label><input type="radio" name="q4" value="4"> 2 → 6 → 7 → 3 → 4 → 5 → 8 → 1</label>
+        </div>
+
+        <!-- ข้อ 5 -->
+        <div class="quiz-item">
+            <p><strong>5. รหัสลำลองในข้อใดเป็นประเภทเดียวกันทั้งหมด</strong></p>
+            <label><input type="radio" name="q5" value="1"> END, SHOW, PRINT</label><br>
+            <label><input type="radio" name="q5" value="2"> START, STOP, BEGIN</label><br>
+            <label><input type="radio" name="q5" value="3"> GET, WRITE, OUTPUT</label><br>
+            <label><input type="radio" name="q5" value="4"> OUTPUT, END, DISPLAY</label>
+        </div>
+
+        <div class="quiz-item">
+            <p><strong>6. รหัสลำลองของการคำนวณหาผลรวมของเลข 2 จำนวน คือข้อใด</strong></p>
+            <label><input type="radio" name="q1" value="1"> COUNT = number 1 and 2</label><br>
+            <label><input type="radio" name="q1" value="2"> COUNT number 1 = number 2</label><br>
+            <label><input type="radio" name="q1" value="3"> COMPUTE number 1 and number 2</label><br>
+            <label><input type="radio" name="q1" value="4"> COMPUTE sum = number 1 + number 2</label>
+        </div>
+
+        <!-- ข้อ 2 -->
+        <div class="quiz-item">
+            <p><strong>7. ข้อใดเป็นลักษณะของการใช้รูปภาพสัญลักษณ์แทนขั้นตอนการเขียนโปรแกรม</strong></p>
+            <label><input type="radio" name="q2" value="1"> ฟังก์ชัน (Function)</label><br>
+            <label><input type="radio" name="q2" value="2"> ผังงาน (Flowchart)</label><br>
+            <label><input type="radio" name="q2" value="3"> รหัสลำลอง (Pseudocode)</label><br>
+            <label><input type="radio" name="q2" value="4"> การบรรยาย (Narrative Description)</label>
+        </div>
+
+        <!-- ข้อ 3 -->
+        <div class="quiz-item">
+            <p><strong>8. อัลกอริทึมแบบผังงานควรเริ่มต้นและสิ้นสุดด้วยสัญลักษณ์ใดตามลำดับ</strong></p>
+            
+            <label><input type="radio" name="q3" value="1"> </label><br>
+            <label><input type="radio" name="q3" value="2"> </label><br>
+            <label><input type="radio" name="q3" value="3"> </label><br>
+            <label><input type="radio" name="q3" value="4"> </label>
+        </div>
+<img src="ข้อสอบ.png" alt="">
+        <!-- ข้อ 4 -->
+        <div class="quiz-item">
+            <p><strong>9. การเขียนผังงานควรอยู่ในขั้นตอนใดของการพัฒนาโปรแกรม</strong></p>
+            <label><input type="radio" name="q4" value="1"> การจัดทำเอกสาร</label><br>
+            <label><input type="radio" name="q4" value="2">การเขียนโปรแกรม</label><br>
+            <label><input type="radio" name="q4" value="3"> การวิเคราะห์ระบบ</label><br>
+            <label><input type="radio" name="q4" value="4"> การออกแบบโปรแกรม</label>
+        </div>
+
+        <!-- ข้อ 5 -->
+        <div class="quiz-item">
+            <p><strong>10. “ขั้นตอนการทำงานที่มีการเปรียบเทียบเพื่อเลือกกระทำเพียง 1 ครั้ง”จากข้อความดังกล่าว ถือว่าเป็นการเขียนผังงานในรูปแบบใด</strong></p>
+            <label><input type="radio" name="q5" value="1"> ทำซ้ำ (Loop)</label><br>
+            <label><input type="radio" name="q5" value="2"> โครงสร้าง (Structure)</label><br>
+            <label><input type="radio" name="q5" value="3"> เรียงลำดับ (Sequence)</label><br>
+            <label><input type="radio" name="q5" value="4"> เลือกกระทำ/เงื่อนไข (Selection/Condition)</label>
+        </div>
+
+        <button type="submit">ตรวจสอบคำตอบ</button>
+    </form>
+
+    <div id="quiz-result"></div>
+</section>
+
 
     <script src="script.js"></script>
+    <script>
+    // ดึง form ในส่วนกรณีศึกษา (อันแรกที่เจอ)
+    const caseForm = document.querySelector('#case-study form');
+
+    caseForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // กันหน้ารีเฟรช
+
+        const length = parseFloat(document.getElementById('length').value);
+        const width  = parseFloat(document.getElementById('width').value);
+        const result = document.getElementById('result');
+
+        if (isNaN(length) || isNaN(width)) {
+            result.innerHTML = '<p style="color:red;">กรุณากรอกข้อมูลให้ครบ</p>';
+            return;
+        }
+
+        const area = length * width;
+        const extra = area * 0.10;
+        const total = area + extra;
+
+        result.innerHTML = `
+            <p>พื้นที่สนาม = ${area.toFixed(2)} ตารางเมตร</p>
+            <p>เผื่อวัสดุ 10% = ${extra.toFixed(2)} ตารางเมตร</p>
+            <p><strong>พื้นที่รวมที่ต้องใช้ = ${total.toFixed(2)} ตารางเมตร</strong></p>
+        `;
+    });
+</script>
+
 </body>
 </html>
