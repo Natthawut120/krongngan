@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* === GLOBAL OPTIMIZE === */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main, section {
+  width: 100%;
+}
+
+/* === MOBILE === */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .section {
+    margin: 12px;
+    padding: 18px;
+  }
+
+  h1 { font-size: 22px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+
+  button, input, select {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  a, button {
+    min-height: 44px; /* กันกดพลาด */
+  }
+}
+</style>
+
     <meta charset="UTF-8">
 
     <!-- Responsive -->
@@ -253,32 +296,5 @@ END</code></pre>
     </footer>
 
     <script src="script.js"></script>
-    <script>
-    // ดึง form ในส่วนกรณีศึกษา
-    const caseForm = document.getElementById('grass-calculator');
-
-    caseForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // กันหน้ารีเฟรช
-
-        const length = parseFloat(document.getElementById('length').value);
-        const width  = parseFloat(document.getElementById('width').value);
-        const result = document.getElementById('result');
-
-        if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
-            result.innerHTML = '<p style="color:red;">กรุณากรอกข้อมูลให้ถูกต้อง (ตัวเลขที่มากกว่า 0)</p>';
-            return;
-        }
-
-        const area = length * width;
-        const extra = area * 0.10;
-        const total = area + extra;
-
-        result.innerHTML = `
-            <p>พื้นที่สนาม = ${area.toFixed(2)} ตารางเมตร</p>
-            <p>เผื่อวัสดุ 10% = ${extra.toFixed(2)} ตารางเมตร</p>
-            <p><strong>พื้นที่รวมที่ต้องใช้ = ${total.toFixed(2)} ตารางเมตร</strong></p>
-        `;
-    });
-    </script>
 </body>
 </html>
